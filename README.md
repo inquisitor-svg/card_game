@@ -21,6 +21,7 @@ https://www.creative-tim.com/product/material-tailwind-dashboard-react
 backend/   Spring Boot REST API
 frontend/  React + Vite learning dashboard
 docs/      Chinese project documentation
+crawler/   CEFR German vocabulary crawler
 ```
 
 Chinese file-by-file guide: `docs/文件说明.md`
@@ -70,6 +71,22 @@ Stop containers:
 ```bash
 docker compose down
 ```
+
+## Crawl CEFR Vocabulary
+
+Run the demo crawler with a local sample page:
+
+```bash
+python crawler/cefr_word_crawler.py --sources crawler/sources.example.json --output data/vocabulary
+```
+
+On Windows, if `python` is not available, try:
+
+```bash
+py crawler/cefr_word_crawler.py --sources crawler/sources.example.json --output data/vocabulary
+```
+
+Crawler guide: `crawler/README.md`
 
 ## External API Hook
 
