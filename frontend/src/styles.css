@@ -1,0 +1,422 @@
+:root {
+  color: #1d2424;
+  background: #eef2ef;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: #1f6f68;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+button:hover {
+  background: #185650;
+  transform: translateY(-1px);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #17201f;
+  color: #f7fbf8;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.brand-mark {
+  align-items: center;
+  background: #e4c466;
+  border-radius: 8px;
+  color: #17201f;
+  display: flex;
+  font-weight: 900;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.brand span,
+.status-pill,
+.training-card small {
+  color: #9fb1ad;
+  display: block;
+  font-size: 0.85rem;
+}
+
+nav {
+  display: grid;
+  gap: 8px;
+}
+
+nav a {
+  align-items: center;
+  border-radius: 8px;
+  color: #dbe7e3;
+  display: flex;
+  gap: 10px;
+  padding: 11px 12px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #223230;
+}
+
+.status-pill {
+  background: #223230;
+  border: 1px solid #334946;
+  border-radius: 8px;
+  margin-top: auto;
+  padding: 12px;
+}
+
+.workspace {
+  display: grid;
+  gap: 20px;
+  padding: 28px;
+}
+
+.hero {
+  align-items: end;
+  background: linear-gradient(135deg, #f8fbf4 0%, #d8e8e1 62%, #f0d579 100%);
+  border: 1px solid #d7dfdc;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 24px;
+  min-height: 260px;
+  padding: 32px;
+}
+
+.hero h1 {
+  font-size: clamp(2.05rem, 4vw, 4rem);
+  line-height: 1.04;
+  margin: 8px 0 16px;
+  max-width: 760px;
+}
+
+.hero p {
+  color: #44504d;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 720px;
+}
+
+.eyebrow {
+  color: #1f6f68 !important;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.hero-meter {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  padding: 20px;
+}
+
+.hero-meter strong {
+  font-size: 2.4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.training-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dfe6e3;
+  border-radius: 8px;
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.panel-header {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.panel-title {
+  align-items: center;
+  color: #1f6f68;
+  display: flex;
+  gap: 10px;
+}
+
+.panel h2 {
+  color: #1d2424;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.question-list {
+  display: grid;
+  gap: 14px;
+}
+
+.question-item {
+  display: grid;
+  gap: 8px;
+}
+
+.question-item span,
+.shadow-target span,
+.mini-stat span {
+  color: #65736f;
+  font-size: 0.86rem;
+}
+
+.question-item strong {
+  color: #1d2424;
+}
+
+textarea,
+input {
+  border: 1px solid #ced9d5;
+  border-radius: 8px;
+  color: #1d2424;
+  outline: 0;
+  padding: 12px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 82px;
+  resize: vertical;
+}
+
+textarea:focus,
+input:focus {
+  border-color: #1f6f68;
+  box-shadow: 0 0 0 3px rgba(31, 111, 104, 0.12);
+}
+
+.result-block {
+  background: #f3f7f5;
+  border-left: 4px solid #1f6f68;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.result-block p {
+  color: #52625e;
+  line-height: 1.6;
+  margin: 6px 0 0;
+}
+
+.time-control {
+  display: grid;
+  gap: 16px;
+}
+
+.time-control label {
+  display: grid;
+  gap: 8px;
+}
+
+.focus-row,
+.stats-row,
+.score-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background: #edf3f0;
+  color: #2f403d;
+  min-height: 34px;
+}
+
+.chip.active {
+  background: #e4c466;
+  color: #17201f;
+}
+
+.mini-stat {
+  background: #f5f0de;
+  border-radius: 8px;
+  min-width: 112px;
+  padding: 12px;
+}
+
+.mini-stat strong {
+  display: block;
+  font-size: 1.45rem;
+  margin-top: 4px;
+}
+
+.module-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.module-tab {
+  background: #edf3f0;
+  color: #2f403d;
+  justify-content: flex-start;
+  min-height: 52px;
+}
+
+.module-tab.active {
+  background: #1f6f68;
+  color: #fff;
+}
+
+.training-card {
+  align-items: center;
+  background: #f8faf8;
+  border: 1px solid #dfe6e3;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 50px;
+  gap: 16px;
+  padding: 18px;
+}
+
+.training-card h2 {
+  font-size: 1.55rem;
+  margin: 8px 0;
+}
+
+.training-card p,
+.shadow-target p {
+  color: #263230;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+.level-badge {
+  background: #e4c466;
+  border-radius: 6px;
+  color: #17201f;
+  display: inline-flex;
+  font-weight: 800;
+  padding: 4px 8px;
+}
+
+.icon-button {
+  border-radius: 8px;
+  height: 48px;
+  padding: 0;
+  width: 48px;
+}
+
+.ghost-button {
+  background: transparent;
+  border: 1px solid #cbd8d4;
+  color: #1f6f68;
+}
+
+.ghost-button:hover {
+  background: #edf3f0;
+}
+
+.shadow-target {
+  background: #f8faf8;
+  border: 1px solid #dfe6e3;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.shadow-input {
+  min-height: 128px;
+}
+
+@media (max-width: 980px) {
+  .app-shell,
+  .two-columns,
+  .training-grid,
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    height: auto;
+    position: static;
+  }
+
+  .module-tabs {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .workspace,
+  .sidebar,
+  .hero,
+  .panel {
+    padding: 18px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .panel-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
